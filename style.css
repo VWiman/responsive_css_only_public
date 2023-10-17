@@ -1,0 +1,164 @@
+/* Jag byggde först en version av sidan där jag ändrade i både html och css.
+Bestämde mig sedan för att utmana mig själv och i denna version har jag endast ändrat i CSS. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+nav {
+  text-align: center;
+  background-image: url(./images/burger1.png);
+  background-repeat: no-repeat;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+nav:hover {
+  background-image: url(./images/burger2.png);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  white-space: nowrap;
+  display: none;
+}
+
+nav a:hover {
+  transition: 0.2s;
+  transform: scale(120%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+img:hover {
+  transition: all 0.3s;
+  transform: scale(104%);
+  justify-self: center;
+  outline: 3px solid white;
+  z-index: 1;
+  box-shadow: 0 0 6px black;
+}
+
+.button {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: #333;
+  background-color: #f1f1f1;
+  outline: 1px solid #333;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.section1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section1 h2 {
+  font-size: 2.5rem;
+}
+
+.catGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.catGrid img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  nav,
+  nav:hover {
+    background-image: none;
+    padding: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  nav a {
+    display: inline-flex;
+  }
+
+  img:hover {
+    transform: scale(102%);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    min-width: 900px;
+  }
+
+  .section.section1 {
+    flex-direction: row;
+  }
+
+  .section1 img {
+    width: 50%;
+  }
+
+  .catGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
